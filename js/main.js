@@ -9,7 +9,6 @@ const btnCal=$('.btn-calculator')
 var type
 
 
-
 var firstValue;
 var secondValue;
 var checkClick1=true
@@ -42,14 +41,15 @@ firstNumberElement.addEventListener('input',(e)=>{
     }
     if (validatorNumber(e.target.value)){
         if(!isNaN(firstValue)){
-            console.log(firstValue)
             $('#error1').innerText=''
         }
         checkClick1=true
+        firstNumberElement.classList.remove('red')
     }
     else{
         checkClick1=false
         $('#error1').innerText="Giá trị ô thứ nhất không phải là số"
+        firstNumberElement.classList.add('red')
     }
     
 })
@@ -69,10 +69,13 @@ secondNumberElement.addEventListener('input',(e)=>{
             $('#error2').innerText=''
         }
         checkClick2=true
+        secondNumberElement.classList.remove('red')
+
     }
     else{
         $('#error2').innerText="Giá trị ô thứ hai không phải là số"
         checkClick2=false
+        secondNumberElement.classList.add('red')
         
     }
 })

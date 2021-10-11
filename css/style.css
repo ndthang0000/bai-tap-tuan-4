@@ -37,6 +37,12 @@ body {
   background-repeat: no-repeat;
 }
 
+.red {
+  color: #f84949;
+  border-color: red;
+  outline-color: red;
+}
+
 .wrapper {
   width: 600px;
   margin: 0px auto;
