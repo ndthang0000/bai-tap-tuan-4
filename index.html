@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h2 class="header">Calculator</h2>
+    <div class="wrapper">
+        <div class="left">
+            <div class="form-group">
+                <label for="">Số Thứ Nhất</label>
+                <input type="text" id="first-number">
+            </div>
+            <div class="form-group">
+                <label for="">Số Thứ Hai</label>
+                <input type="text" id="second-number">
+            </div>
+            <div class="form-group">
+                <label for="">Kết quả</label>
+                <input type="text" id="result" disabled>
+            </div>
+            <div class="form-group infor">
+                <label for="">Thông báo</label>
+                <div>
+                    <span id="error1"></span>
+                    <span id="error2"></span>
+                    <span id="success"></span>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="right-top">
+                <div class="radio-group">
+                    <input type="radio" name="choseone" id="add" value="add" checked>
+                    <label for="add">Cộng</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="choseone" id="sub" value="sub">
+                    <label for="sub">Trừ</label>
+                </div>
+            </div>
+            <div class="right-bottom">
+                <div class="radio-group">
+                    <input type="radio" name="choseone" id="mul" value="mul">
+                    <label for="mul">Nhân</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="choseone" id="div" value="div">
+                    <label for="div">Chia</label>
+                </div>
+            </div>
+            <div class="btn-calculator">
+                Tính
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
