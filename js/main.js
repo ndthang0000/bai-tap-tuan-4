@@ -21,7 +21,7 @@ resultElement.addEventListener('keypress',(e)=>{
 })
 
 const validatorNumber=(string)=>{
-    if(/[^\.\w]/.test(string)){
+    if(/[^\.\s\w]/.test(string)){
         return false
     }
     if(/[a-z]/.test(string)){
@@ -82,6 +82,7 @@ secondNumberElement.addEventListener('input',(e)=>{
 
 btnCal.addEventListener('click',(e)=>{
     if(checkClick1&&checkClick2){
+        resultElement.classList.remove('invalid')
         type=$('input[name=choseone]:checked').value
         if(!isNaN(secondValue)&&(!isNaN(firstValue))){
         if(type==="add"){
@@ -100,6 +101,9 @@ btnCal.addEventListener('click',(e)=>{
         $('#success').innerText="Successful!!"
         return 
         }
+    }
+    else{
+        resultElement.classList.add('invalid')
     }
 })
 setInterval(()=>{

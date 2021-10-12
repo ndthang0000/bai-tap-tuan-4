@@ -31,8 +31,10 @@ background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
 }
 .red{
     color: #f84949;
-    border-color:red ;
-    outline-color: red;
+    
+}
+.invalid{
+    border-color: red !important;
 }
 .wrapper{
     width: 600px;
@@ -46,7 +48,7 @@ background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
     border-bottom-right-radius: 10px;
     background-color: #f5f6fa;
     .left{
-        flex-basis: 65%;
+        flex-basis: 63%;
         .form-group{
             display: flex;
             align-items: center;
@@ -55,18 +57,21 @@ background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
             label{
                 flex-basis: 40%;
                 font-weight: 600;
-                font-size: 1.1rem;
+                font-size: 1rem;
                 color: #2f3640;
             }
             input{
+                border-radius: 15px;
+                outline: none;
                 flex-basis: 60%;
                 height: 30px;
-                padding: 5px 10px;
-                border: 1px solid rgb(160, 160, 160);
+                padding: 8px 15px;
+                border: 2px solid rgb(192, 190, 190);
                 min-width: 50px;
+                
             }
             #result{
-                border: 2px solid #3742fa;
+                border: 3px solid #2ed573;
                 font-size: 1.4rem;
                 font-weight: 600;
                 text-align: center;
@@ -79,6 +84,7 @@ background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
                 font-size: 12px;
                 font-style: italic;
                 display: block;
+                
             }
             #success{
                 color: #2ed573;
@@ -89,19 +95,25 @@ background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
 
     }
     .right{
-        flex-basis: 30%;
+        flex-basis: 32%;
         .right-top,.right-bottom{
             display: flex;
             align-items: center;
             flex-direction: row;
             margin: 10px;
             align-items: center;
+            input{
+                width: 18px;
+                height: 18px;
+                margin-right: 4px;
+            }
         }
         .radio-group{
             height: 35px;
             flex: 1;
             display: flex;
             align-items: center;
+            margin-right: 10px;
             label{
                 font-size: 1rem;
                 margin-left: 5px;
