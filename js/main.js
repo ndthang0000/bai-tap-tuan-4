@@ -27,6 +27,9 @@ const validatorNumber=(string)=>{
     if(/[a-z]/.test(string)){
         return false
     }
+    if(isNaN(string)){
+        return false
+    }
     return true
 }
 firstNumberElement.addEventListener('input',(e)=>{
